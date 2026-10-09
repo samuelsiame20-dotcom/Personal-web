@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Samuel Siame - Data Science student at Mulungushi University, learning to become a data engineer. Projects, roadmap and contact.">
+    <meta name="author" content="Samuel Siame">
+    <meta name="theme-color" content="#1a365d">
+    <!-- Preview card when the link is shared on LinkedIn, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Samuel Siame | Data Engineering Student">
+    <meta property="og:description"
+        content="Data Science student at Mulungushi University building toward a career in data engineering.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a365d'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
+    <title>Samuel Siame | Student Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-bar">
+            <p class="brand">Samuel Siame</p>
+            <div class="header-actions">
+                <!-- Theme switch (JavaScript feature) -->
+                <button type="button" id="theme-toggle" class="btn btn-small" aria-pressed="false">
+                    Dark theme
+                </button>
+                <!-- Mobile menu button: only shown on narrow screens -->
+                <button type="button" id="menu-toggle" class="btn btn-small menu-toggle" aria-expanded="false"
+                    aria-controls="site-nav">
+                    Menu
+                </button>
+            </div>
+        </div>
+
+        <nav id="site-nav" aria-label="Main navigation">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#hobbies">My Hobbies</a>
+            <a href="#learning">My Learning Plan</a>
+            <a href="#gallery">My Photos</a>
+            <a href="#media">My Media</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Introductory area -->
+        <div id="hero">
+            <h1>Samuel Siame</h1>
+            <p class="programme">Data Science undergraduate &middot; Mulungushi University, Kabwe</p>
+            <p class="intro">I am learning to build the pipelines and systems that move and store data. This site
+                shows what I am working on and what I have learned in ICT251 Web Technologies.</p>
+            <p class="now"><span class="now-label">Currently learning</span> SQL, Linux and Git &mdash; Phase 0 of
+                my <a href="#learning">data engineering roadmap</a></p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>Hi, I am Samuel Siame, an undergraduate student at Mulungushi University in Kabwe, Zambia, studying
+                Data Science. My main interest is data engineering, which means building the pipelines and systems that
+                move and store data so that others can analyse it. I am taking ICT251 because I want to understand how
+                websites are built, so that I can one day create simple web dashboards that present the data my
+                pipelines produce. Outside class, I enjoy gaming, football and movies.</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects and Skills</h2>
+            <p>Examples of what I have learned through coursework and my own projects. Search or filter by skill.</p>
+
+            <!-- Project search and filter (JavaScript feature) -->
+            <div class="filter-bar">
+                <div class="filter-search">
+                    <label for="project-search">Search projects</label>
+                    <input type="search" id="project-search" placeholder="e.g. Python, database, Java">
+                </div>
+                <div class="filter-buttons" role="group" aria-label="Filter projects by skill">
+                    <button type="button" class="filter-btn is-active" data-filter="all"
+                        aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button type="button" class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+                    <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
+                    <button type="button" class="filter-btn" data-filter="java" aria-pressed="false">Java</button>
+                </div>
+                <button type="button" id="filter-reset" class="btn btn-outline">Reset</button>
+            </div>
+            <p id="filter-status" class="filter-status" aria-live="polite"></p>
+
+            <div class="project-grid" id="project-grid">
+                <article class="project-card" data-tags="web">
+                    <h3>This Portfolio Website</h3>
+                    <p>Built with semantic HTML5, external CSS and plain JavaScript, then deployed to Render through
+                        GitHub.</p>
+                    <ul class="tags">
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-tags="python web data">
+                    <h3>Z-PATCI / Z-SEAL</h3>
+                    <p>A Flask and SQLite prototype for checking product authenticity and tracking counterfeit alcohol
+                        and tobacco in Zambia.</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>SQLite</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-tags="data">
+                    <h3>NSDI Land Verification</h3>
+                    <p>A geospatial concept that lets buyers and lenders check a land parcel's boundaries and status
+                        before a sale, using a PostGIS database.</p>
+                    <ul class="tags">
+                        <li>PostgreSQL</li>
+                        <li>PostGIS</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-tags="java">
+                    <h3>JavaFX Labs (ICT261)</h3>
+                    <p>Desktop user interfaces built in Advanced Java, covering layouts, event handling and build
+                        tools.</p>
+                    <ul class="tags">
+                        <li>Java</li>
+                        <li>JavaFX</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Playing video games like Need for Speed and Call of Duty</li>
+                <li>Following European association football and UEFA match fixtures</li>
+                <li>Listening to music</li>
+            </ul>
+        </section>
+
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>My goal is to become a data engineer: someone who moves data reliably from where it is produced to
+                where it creates value. Tools change every few years, so I am building strong fundamentals first and
+                adding tools on top of them. This is my long-term roadmap, phase by phase.</p>
+
+            <div class="table-wrap">
+                <table class="roadmap">
+                    <caption>My Data Engineering Roadmap</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Phase</th>
+                            <th scope="col">When</th>
+                            <th scope="col">What I will learn</th>
+                            <th scope="col">Milestone project</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="is-current">
+                            <td data-label="Phase"><strong>0. Foundations</strong>
+                                <span class="badge">Current phase</span>
+                            </td>
+                            <td data-label="When">Now (months 1&ndash;4)</td>
+                            <td data-label="What I will learn">Python fundamentals, SQL joins, aggregations and window
+                                functions, the Linux command line, Git, and how computers store and process data</td>
+                            <td data-label="Milestone project">Write Python and SQL confidently without looking up basic
+                                syntax</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Phase"><strong>1. Core data engineering</strong></td>
+                            <td data-label="When">Months 4&ndash;12</td>
+                            <td data-label="What I will learn">Advanced SQL and query plans, database internals, data
+                                modelling (star schemas), Python for data (APIs, JSON, CSV, Parquet), Airflow, Docker
+                                and
+                                AWS basics</td>
+                            <td data-label="Milestone project">An end-to-end pipeline that pulls public data from an
+                                API,
+                                transforms it, loads it into a warehouse and is fully documented</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Phase"><strong>2. Scale and distributed systems</strong></td>
+                            <td data-label="When">Years 1&ndash;2</td>
+                            <td data-label="What I will learn">Distributed systems, Apache Spark, cloud data warehouses,
+                                lakehouse formats (Iceberg, Delta Lake), Kafka, and testing and CI/CD for pipelines</td>
+                            <td data-label="Milestone project">A tested and monitored pipeline that processes millions
+                                of
+                                rows</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Phase"><strong>3. Production engineering and MLOps</strong></td>
+                            <td data-label="When">Years 2&ndash;3</td>
+                            <td data-label="What I will learn">Streaming, data quality and observability, data security
+                                and governance, Kubernetes, and MLOps basics such as MLflow</td>
+                            <td data-label="Milestone project">A reusable platform component, such as a data quality
+                                framework</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Phase"><strong>4. Senior and staff level</strong></td>
+                            <td data-label="When">Years 3&ndash;5 and beyond</td>
+                            <td data-label="What I will learn">Data architecture at scale, data infrastructure for AI
+                                and
+                                ML, cost optimisation, mentoring and writing about what I build</td>
+                            <td data-label="Milestone project">Lead the design of a data platform used by several
+                                teams</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>My Next Three Steps</h3>
+            <ol>
+                <li>Practise SQL every day until joins and window functions feel natural.</li>
+                <li>Use Linux (WSL2), the command line and Git for all my coursework.</li>
+                <li>Build my first end-to-end pipeline using public Zambian data and publish it on GitHub with a clear
+                    README.</li>
+            </ol>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>My Photos</h2>
+
+            <!-- Gallery viewer (JavaScript feature). Hidden until script.js runs. -->
+            <div class="viewer" id="viewer" hidden>
+                <figure class="viewer-figure">
+                    <img id="viewer-img" src="images/IMG-20250222-WA0280.jpg" alt="" width="900" height="1200">
+                    <figcaption id="viewer-caption"></figcaption>
+                </figure>
+                <div class="viewer-controls">
+                    <button type="button" id="prev-photo" class="btn">&larr; Previous</button>
+                    <p id="photo-counter" class="photo-counter" aria-live="polite"></p>
+                    <button type="button" id="next-photo" class="btn">Next &rarr;</button>
+                </div>
+            </div>
+
+            <div class="gallery" id="thumbs">
+                <figure>
+                    <img src="images/IMG-20250222-WA0280.jpg" width="900" height="1200" loading="lazy"
+                        alt="Samuel at night in a grey Los Angeles sweatshirt, standing outside a lit building">
+                    <figcaption>An evening out.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG-20240621-WA0243.jpg" width="810" height="1080" loading="lazy"
+                        alt="Samuel in a grey sweatshirt looking down, standing in a paved car park on a sunny day">
+                    <figcaption>A sunny afternoon outside a shopping centre.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG-20240621-WA0245.jpg" width="768" height="1024" loading="lazy"
+                        alt="Samuel sitting in a barber's chair, smiling and making a hand sign">
+                    <figcaption>Fresh haircut at the barbershop.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/2026_05_29_20_03_44_IMG_9247.JPG" width="675" height="1200" loading="lazy"
+                        alt="Close-up selfie of Samuel in a black hoodie in a dimly lit room">
+                    <figcaption>A late-night selfie after a long study session.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG-20250222-WA0297.jpg" width="900" height="1200" loading="lazy"
+                        alt="Samuel in a grey sweatshirt and black cargo trousers, looking down beside a row of mirrors">
+                    <figcaption>Trying out a new outfit.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <h3>Short Self-Introduction</h3>
+                    <video controls preload="metadata">
+                        <source src="videos/intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><strong>Summary:</strong> In this short video, I introduce myself and state my degree
+                        programme.</p>
+                </div>
+
+                <div class="media-item">
+                    <h3>Audio Introduction</h3>
+                    <audio controls preload="metadata">
+                        <source src="videos/voice.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p><strong>Description:</strong> A brief recording introducing myself.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p class="note"><strong>Browser demonstration only &mdash; no message is sent.</strong> The form checks
+                your input and shows a preview on this page.</p>
+
+            <!-- Contact form validation and preview (compulsory JavaScript feature).
+                 novalidate lets script.js show its own messages; required attributes are kept. -->
+            <form id="contact-form" action="#" method="get" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="name-error">
+                <p class="field-error" id="name-error"></p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                    aria-describedby="email-error">
+                <p class="field-error" id="email-error"></p>
+
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="General question">General question</option>
+                    <option value="Project collaboration">Project collaboration</option>
+                    <option value="Feedback on my site">Feedback on my site</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                <p class="field-error" id="message-error"></p>
+
+                <button type="submit" class="btn">Validate and Preview</button>
+            </form>
+
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+            <div id="preview" class="preview" hidden>
+                <h3>Preview of your validated input</h3>
+                <dl>
+                    <dt>Name</dt>
+                    <dd id="preview-name"></dd>
+                    <dt>Email</dt>
+                    <dd id="preview-email"></dd>
+                    <dt>Topic</dt>
+                    <dd id="preview-topic"></dd>
+                    <dt>Message</dt>
+                    <dd id="preview-message"></dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Samuel Siame &middot; ICT251 Web Technologies, Mulungushi University</p>
+        <p>
+            <a href="https://github.com/samuelsiame20-dotcom/Personal-web" target="_blank"
+                rel="noopener noreferrer">View Source on GitHub</a>
+            &middot;
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank"
+                rel="noopener noreferrer">MDN: Learn Web Development</a>
+        </p>
+    </footer>
+</body>
+
+</html>
